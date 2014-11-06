@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:700,400' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>    
+    <script type="text/javascript">
+
+    </script>
+    <style>
+        #appCanvas {
+            display: block;
+            margin: 0 auto; 
+            margin-top: 80px; 
+            background: url(assets/floor2.png);
+        }
+
+        .gameWindow {
+            /* Wrapping a class that has an absolute position
+               with one that is relative helps control where the
+               absolute position starts */
+            position:relative;
+        }
+
+        .score {
+            font-family: 'Roboto', sans-serif;
+            font-size:24px;
+            font-weight: 700;
+            position:absolute;
+            top:10px;
+            left:10px;
+        }
+
+        .gameOverSuccess {
+            display:block;
+            font-family: 'Roboto', sans-serif;
+            font-size: 72px;
+            font-weight: 700;
+            color: rgba(255, 0, 0, 0);
+            position: absolute;           
+            top: 0px;
+            left: 0px;           
+            /* update these 2 lines to match appCanvas to keep centered */  
+            width: 640px;          
+            line-height: 480px;   
+            
+            text-align: center;         
+            -webkit-transition: all 1s;
+            transition: all 1s;
+        }
+
+        .reveal {
+            color: rgba(255, 0, 0, 1);
+        }
+
+    </style>
+    <title>Week 8 - Cat Game 2</title>
+</head>
+<body>
+    <div class="gameWindow">
+        <img src="assets/torch.gif" id="lamp" width="50" height="50">
+        <div class="score">0</div>
+        <div class="gameOverSuccess">Yummy Mice!</div>
+        <!-- The main frame of the game -->
+        <canvas id="appCanvas" width="1080" height="600">
+            If you see this, Canvas not supported.
+        </canvas>   
+    </div>
+    <script type="text/javascript" src="js/utils.js"></script>  
+    <script type="text/javascript" src="js/sprite.js"></script> 
+    <script type="text/javascript" src="js/player.js"></script> 
+    <script type="text/javascript" src="js/cat.js"></script>
+    <script type="text/javascript" src="js/mouse.js"></script>  
+    <script type="text/javascript" src="js/game.js"></script>  
+</body>
+</html>
